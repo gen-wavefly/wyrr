@@ -10,7 +10,7 @@ import circleImg from "/public/assets/img/circleBg.png";
 import circleImg2 from "/public/assets/img/circle-bg2.svg";
 import circleImg3 from "/public/assets/img/circle-bg3.svg";
 import circleImg4 from "/public/assets/img/circle-bg4.svg";
-import IphoneBg from "/public/assets/img/bg1.svg";
+import IphoneBg from "/public/assets/img/wyrr-app-bg.svg";
 import BgCircleAmin from "./bgCircleAmin";
 import AllCircleAmin from "./allCircleAmin";
 import { useParallax } from "react-scroll-parallax";
