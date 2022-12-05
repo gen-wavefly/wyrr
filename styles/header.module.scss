@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 155px;
+  max-width: 818px;
+  text-align: center;
+  & > h4 {
+    margin: 24px auto auto;
+    max-width: 647px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding-top: 118px;
+  }
+}

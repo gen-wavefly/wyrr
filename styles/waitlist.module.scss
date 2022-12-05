@@ -1,0 +1,124 @@
+.container {
+  position: relative;
+  margin: 388px 311px 0 311px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 88px;
+  width: auto;
+  height: 459px;
+  background: linear-gradient(
+    103.79deg,
+    rgba(255, 255, 255, 0.5) 0.36%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  backdrop-filter: blur(150px);
+  border-radius: 40px;
+
+  & > p {
+    font-weight: 400;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    max-width: 300px;
+  }
+}
+.inputContainer {
+  position: relative;
+  margin: 32px auto auto;
+  width: 100%;
+  // max-width: 503px;
+  height: 59px;
+
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 8px 24px;
+  border: 1px solid rgba(212, 212, 212, 0.2);
+  border-radius: 100px;
+  z-index: 2;
+
+  &.active {
+    border: 1px solid #cfdafe;
+    & > .formInput {
+      & > input {
+        color: #808080;
+        opacity: 0.5;
+      }
+    }
+  }
+  & > .formInput {
+    width: 100%;
+    & > fieldset {
+      border: 0;
+    }
+    & > input {
+      padding-left: 0;
+      color: #cccccc;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+      border: 0 !important;
+      &::placeholder {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 32px 64px;
+  width: 750px;
+  height: 392px;
+  background: linear-gradient(
+    103.79deg,
+    rgba(255, 255, 255, 0.8) 0.36%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  backdrop-filter: blur(150px);
+  border-radius: 40px;
+  gap: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  & > button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 32px;
+    top: 32px;
+
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+  }
+
+  & > p {
+    max-width: 500px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: #2a2a2a;
+    align-self: stretch;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 160px;
+    padding: 64px 16px;
+  }
+  .formInput {
+    width: 100% !important;
+  }
+}
