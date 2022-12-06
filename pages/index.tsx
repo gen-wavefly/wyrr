@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <Box sx={{ position: "relative" }}>
       <Head>
-        <title>Wyrr</title>
+        <title>Wyrr | Moving money across the world</title>
         <meta name="description" content="wyrr" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

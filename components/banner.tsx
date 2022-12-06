@@ -38,7 +38,7 @@ export default function Banner() {
       </Box>
       <AppPlaceholder />
 
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%", overflow:"hidden" }}>
         <Image
           src={IphoneBg}
           className={styles.appBg}

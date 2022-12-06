@@ -11,7 +11,7 @@ const HeadContents = () => (
     />
     <meta name="msapplication-TileColor" content="#0E45FB" />
     <meta name="theme-color" content="#0E45FB" />
-    <title>Wyrr</title>
+    <title>Wyrr | Moving money across the world.</title>
   </>
 );
 

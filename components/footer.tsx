@@ -12,13 +12,16 @@ export default function Footer() {
         wyrr
       </Typography>
       <Stack direction="row" sx={{ mt: "16px" }} gap={"8px"}>
-        <IconButton>
+        <IconButton
+          href="https://www.facebook.com/profile.php?id=100088077934664&mibextid=LQQJ4d"
+          target="_blank"
+        >
           <Image src={FacebookIcon} alt="facebook" />
         </IconButton>
-        <IconButton>
+        <IconButton href="https://www.instagram.com/sendwyrr" target="_blank">
           <Image src={InstagramIcon} alt="instagram" />
         </IconButton>
-        <IconButton>
+        <IconButton href="https://www.twitter.com/sendwyrr" target="_blank">
           <Image src={TwitterIcon} alt="twitter" />
         </IconButton>
       </Stack>
