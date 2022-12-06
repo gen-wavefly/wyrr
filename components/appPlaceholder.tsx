@@ -11,7 +11,7 @@ export default function AppPlaceholder() {
         alt="Iphone Phone App Placeholder"
         data-aos="fade-up"
         data-aos-duration="1000"
-        data-aos-offset="200"
+        data-aos-offset="-200"
       />
     </div>
   );

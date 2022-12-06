@@ -1,58 +1,51 @@
 .container {
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   height: 100vh;
-  width: 100%;
-  opacity: 0;
-  animation: fade 0.4s ease-in forwards;
-  background: black;
+  width: 100vw;
+  background: #cfdafe;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  gap: 24px;
+  animation: loadder 0.5s ease 3s forwards;
+  & > h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 83px;
+    text-align: center;
+    color: #afc1fe;
+    -webkit-text-stroke: 1px #0e45fb;
+    display: flex;
+    align-items: flex-start;
+    & > .nodge {
+      position: relative;
+      top: 10px;
+      font-size: 32px;
+      line-height: normal;
+    }
+  }
+  & > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
+@keyframes loadder {
+  from {
     opacity: 1;
   }
-}
-
-.balls {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  .ball {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: #1b5299;
-    margin: 0 6px 0 0;
-    animation: oscillate 0.7s ease-in forwards infinite;
-  }
-
-  .one {
-    animation-delay: 0.5s;
-  }
-  .two {
-    animation-delay: 1s;
-  }
-  .three {
-    animation-delay: 2s;
-  }
-}
-@keyframes oscillate {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0);
+  to {
+    opacity: 0;
   }
 }
