@@ -7,7 +7,7 @@ import WaitListInput from "./waitlistInput";
 
 export default function Waitlist() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-aos="zoom-in">
       <Image
         data-aos="fade-in"
         src={ExplodeImg}
@@ -15,17 +15,11 @@ export default function Waitlist() {
         width={100}
         height={100}
       />
-      <Typography
-        data-aos="fade-in"
-        data-aos-delay="300"
-        variant="h2"
-        sx={{ mt: "32px" }}
-      >
+      <Typography data-aos="fade-in" variant="h2" sx={{ mt: "32px" }}>
         Get early access
       </Typography>
       <Typography
         data-aos="fade-in"
-        data-aos-delay="800"
         component="p"
         sx={{
           mt: "16px",

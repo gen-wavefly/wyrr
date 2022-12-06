@@ -89,6 +89,9 @@ const theme = createTheme({
           "&:hover": {
             background: "#eee",
           },
+          "&.Mui-disabled": {
+            background: "#CFDAFE",
+          },
         },
         contained: {
           background: "#0E45FB",
@@ -102,6 +105,10 @@ const theme = createTheme({
           color: "#fff",
           fontWeight: 500,
           textTransform: "none",
+          "&.Mui-disabled": {
+            background: "#0E45FB",
+            color: "#fff",
+          },
         },
       },
     },

@@ -85,6 +85,7 @@ export default function WaitListInput({ active }: { active?: boolean }) {
       />
       <LoadingButton
         loading={loading}
+        disabled={!email}
         variant={active ? "contained" : "text"}
         type="submit"
       >
