@@ -12,7 +12,7 @@
   align-items: center;
   opacity: 1;
   gap: 24px;
-  animation: loadder 0.5s ease 3s forwards;
+  animation: loadder 1s ease 3s forwards;
   & > h2 {
     font-style: normal;
     font-weight: 600;
@@ -43,9 +43,11 @@
 
 @keyframes loadder {
   from {
-    opacity: 1;
+    // opacity: 1;
+    transform: translateY(0);
   }
   to {
-    opacity: 0;
+    // opacity: 0;
+    transform: translateY(-100%);
   }
 }
