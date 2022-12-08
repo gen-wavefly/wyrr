@@ -10,7 +10,7 @@ import circleImg from "/public/assets/img/circleBg.png";
 import circleImg2 from "/public/assets/img/circle-bg2.svg";
 import circleImg3 from "/public/assets/img/circle-bg3.svg";
 import circleImg4 from "/public/assets/img/circle-bg4.svg";
-import IphoneBg from "/public/assets/img/wyrr-app-bg.svg";
+import IphoneBg from "/public/assets/img/wyrr-app-bg.png";
 import BgCircleAmin from "./bgCircleAmin";
 import AllCircleAmin from "./allCircleAmin";
 import { useParallax } from "react-scroll-parallax";
@@ -36,15 +36,17 @@ export default function Banner() {
       <Box sx={{ maxWidth: "503px", mx: "auto" }}>
         <WaitListInput />
       </Box>
+
       <AppPlaceholder />
 
-      <Box sx={{ width: "100%", overflow:"hidden" }}>
-        <Image
-          src={IphoneBg}
-          className={styles.appBg}
-          alt="wyrr app background"
-        />
-      </Box>
+      {/* <Box className={styles.appBgContainer}> */}
+      <Image
+        src={IphoneBg}
+        layout="fill"
+        className={styles.appBg}
+        alt="wyrr app background"
+      />
+      {/* </Box> */}
     </div>
   );
 }
