@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "../styles/amin.module.scss";
+import styles from "../styles/amin.module.scss";
 import { Box } from "@mui/material";
+import Image from "next/image";
+import BgBubbleImg from "/public/assets/img/bg-bubble.png";
+import BgBubbleBlueImg from "/public/assets/img/bg-bubble-blue.png";
 
 /**
  * 
@@ -29,27 +32,52 @@ import { Box } from "@mui/material";
 const SVG_WIDTH = 450;
 const ORIGSPEEDX = 100;
 const ORIGSPEEDY = 100;
-export default function BgCircleAmin({
-  posY,
+export default function BgBubble({
   posX,
+  posY,
   active,
-  id,
 }: {
-  posY?: number;
-  posX?: number;
+  posY: number;
+  posX: number;
   active?: boolean;
-  id: number;
 }) {
-  const [x, setX] = useState(posX ?? -400);
-  const [speedX, setSpeedX] = useState(ORIGSPEEDX);
+  const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-  const [speedY, setSpeedY] = useState(ORIGSPEEDY);
+
+  useEffect(() => {
+    setX(posX);
+    setY(posY);
+  }, [posX, posY]);
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      let ranXPostion = Math.floor(Math.random() * 2000);
+      let ranYPostion = Math.floor(Math.random() * posY);
+      // if (posY <= ranYPostion) {
+      //   ranYPostion = posY * 2;
+      // }
+      const wWidth = window.innerWidth;
+      if (ranXPostion >= wWidth) {
+        ranXPostion = ranXPostion / 2;
+        // setY(ranYPostion);
+        console.log("yesss");
+      }
+      setX(ranXPostion);
+    }, 4000);
+    return () => {
+      clearInterval(timerId);
+    };
+  }, [posX, posY]);
+
   return (
-    <Box
-      sx={{ position: "absolute", left: "52%", bottom: "0px" }}
-      className="circleContainer"
+    <div
+      style={{
+        left: `${x}px`,
+        top: `${y}px`,
+      }}
+      className={styles.bubbleContainer}
     >
-      <motion.div
+      {/* <motion.div
         animate={{ x: x, y: y, direction: "rtl" }}
         transition={{
           type: "spring",
@@ -137,7 +165,13 @@ export default function BgCircleAmin({
             </linearGradient>
           </defs>
         </svg>
-      </motion.div>
-    </Box>
+      </motion.div> */}
+      <Image
+        src={active ? BgBubbleBlueImg : BgBubbleImg}
+        width={300}
+        height={300}
+        alt="bubble bg"
+      />
+    </div>
   );
 }

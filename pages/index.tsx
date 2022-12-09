@@ -18,6 +18,7 @@ import Waitlist from "../components/waitlist";
 import Footer from "../components/footer";
 import AllCircleAmin from "../components/allCircleAmin";
 import { Box } from "@mui/material";
+import BgBubble from "../components/bgCircleAmin";
 
 export default function Home() {
   const [pos, setPos] = useState(0);
@@ -31,12 +32,23 @@ export default function Home() {
     };
   });
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box sx={{ position: "relative", overflowX: "hidden" }}>
       <Head>
         <title>Wyrr | Moving money across the world</title>
         <meta name="description" content="wyrr" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Box sx={{ position: "absolute", width: "100vw", zIndex: 1 }}>
+        <BgBubble posX={1059} posY={50} />
+        <BgBubble posX={200} posY={300} />
+        <BgBubble posX={-40} posY={900} />
+        <BgBubble posX={1000} posY={730} />
+        <BgBubble posX={800} posY={1250} active />
+        <BgBubble posX={10} posY={1600} active />
+        <BgBubble posX={300} posY={2450} active />
+        <BgBubble posX={20} posY={3000} active />
+        <BgBubble posX={1000} posY={3200} active />
+      </Box>
       <Banner />
       <Features />
       <Waitlist />
@@ -61,7 +73,6 @@ export default function Home() {
       </main> */}
 
       <footer className={styles.footer}></footer>
-      {/* <AllCircleAmin  /> */}
     </Box>
   );
 }
